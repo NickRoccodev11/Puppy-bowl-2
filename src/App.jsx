@@ -31,13 +31,6 @@ function App() {
     setSinglePuppy(puppyData.data.player);
   }
 
-  // POST /api/COHORT-NAME/players/
-
-  // const deletePuppy = async () => {
-  //   const res = await fetch(`${BASE_URL}/ `)
-  // }
-
-  console.log(singlePuppy)
   return (
     <>
 <h1 id="app-heading">The Puppy Bowl</h1>

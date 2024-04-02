@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-size: 3em;
   text-decoration: underline;
-  text-shadow: 2px 2px rgb(116, 116, 204);
+  text-shadow: 2px 3px rgb(132, 85, 174);
   font-family: 'Druid';
 }
 
@@ -33,9 +33,31 @@ body {
   margin-top: 15px;
   color: azure;
 }
-.delete-button:hover{
-  background-color: rgb(223, 55, 36);
-  box-shadow: 4px 4px 4px rgb(194, 85, 126);
+
+@keyframes flash {
+  0% {
+    background-color: rgb(210, 90, 77);
+    box-shadow: 4px 4px 4px rgb(119, 132, 142);
+  }
+
+
+  50% {
+    background-color: rgb(250, 25, 0);
+    box-shadow: 4px 4px 4px rgb(194, 85, 126);
+  }
+
+  100% {
+    background-color: rgb(210, 90, 77);
+    box-shadow: 4px 4px 4px rgb(119, 132, 142);
+
+  }
+
+}
+
+.delete-button:hover {
+  animation-name: flash;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -48,7 +70,8 @@ body {
   box-shadow: 5px 5px 5px rgb(63, 71, 77);
 }
 
-.add:hover, .button-style:hover {
+.add:hover,
+.button-style:hover {
   background-color: rgb(110, 225, 225);
   box-shadow: 5px 5px 5px rgb(214, 209, 181);
 }
@@ -107,6 +130,7 @@ body {
 #single-view>h2 {
   color: rgb(4, 88, 88);
   text-shadow: 2px 2px 4px rgb(41, 89, 89);
+  font-size: 2.2em;
 }
 
 @keyframes fade-in {
@@ -127,7 +151,7 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgb(148, 173, 165);
-  padding: 25px;
+  padding: 0 0 25px 0;
 }
 
 .details {
